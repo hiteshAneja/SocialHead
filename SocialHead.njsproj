@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>SocialHead</Name>
+    <RootNamespace>SocialHead</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>68dd8d89-b8b6-404c-8416-4dd5cd605bb3</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>bin\www</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="client\app\account\account.js" />
+    <Compile Include="client\app\account\login\login.controller.js" />
+    <Compile Include="client\app\account\settings\settings.controller.js" />
+    <Compile Include="client\app\account\signup\signup.controller.js" />
+    <Compile Include="client\app\admin\admin.controller.js" />
+    <Compile Include="client\app\admin\admin.js" />
+    <Compile Include="client\app\app.js" />
+    <Compile Include="client\app\main\main.controller.js" />
+    <Compile Include="client\app\main\main.controller.spec.js" />
+    <Compile Include="client\app\main\main.js" />
+    <Compile Include="client\components\auth\auth.service.js" />
+    <Compile Include="client\components\auth\user.service.js" />
+    <Compile Include="client\components\modal\modal.service.js" />
+    <Compile Include="client\components\mongoose-error\mongoose-error.directive.js" />
+    <Compile Include="client\components\navbar\navbar.controller.js" />
+    <Compile Include="client\components\socket\socket.mock.js" />
+    <Compile Include="client\components\socket\socket.service.js" />
+    <Compile Include="e2e\main\main.po.js" />
+    <Compile Include="e2e\main\main.spec.js" />
+    <Compile Include="Gruntfile.js" />
+    <Compile Include="server\api\thing\index.js" />
+    <Compile Include="server\api\thing\thing.controller.js" />
+    <Compile Include="server\api\thing\thing.model.js" />
+    <Compile Include="server\api\thing\thing.socket.js" />
+    <Compile Include="server\api\thing\thing.spec.js" />
+    <Compile Include="server\api\user\index.js" />
+    <Compile Include="server\api\user\user.controller.js" />
+    <Compile Include="server\api\user\user.model.js" />
+    <Compile Include="server\api\user\user.model.spec.js" />
+    <Compile Include="app.js" />
+    <Compile Include="server\auth\auth.service.js" />
+    <Compile Include="server\auth\facebook\index.js" />
+    <Compile Include="server\auth\facebook\passport.js" />
+    <Compile Include="server\auth\google\index.js" />
+    <Compile Include="server\auth\google\passport.js" />
+    <Compile Include="server\auth\index.js" />
+    <Compile Include="server\auth\local\index.js" />
+    <Compile Include="server\auth\local\passport.js" />
+    <Compile Include="server\auth\twitter\index.js" />
+    <Compile Include="server\auth\twitter\passport.js" />
+    <Compile Include="server\components\errors\index.js" />
+    <Compile Include="server\config\environment\development.js" />
+    <Compile Include="server\config\environment\index.js" />
+    <Compile Include="server\config\environment\production.js" />
+    <Compile Include="server\config\environment\test.js" />
+    <Compile Include="server\config\express.js" />
+    <Compile Include="server\config\local.env.js" />
+    <Compile Include="server\config\local.env.sample.js" />
+    <Compile Include="server\config\seed.js" />
+    <Compile Include="server\config\socketio.js" />
+    <Compile Include="server\routes.js" />
+    <Compile Include="bin\www" />
+    <Compile Include="test\karma.conf.js" />
+    <Compile Include="test\spec\controllers\about.js" />
+    <Compile Include="test\spec\controllers\main.js" />
+    <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
+    <Content Include="client\.htaccess" />
+    <Content Include="client\.jshintrc" />
+    <Content Include="client\app\account\login\login.html" />
+    <Content Include="client\app\account\login\login.scss" />
+    <Content Include="client\app\account\settings\settings.html" />
+    <Content Include="client\app\account\signup\signup.html" />
+    <Content Include="client\app\admin\admin.html" />
+    <Content Include="client\app\admin\admin.scss" />
+    <Content Include="client\app\app.scss" />
+    <Content Include="client\app\main\main.html" />
+    <Content Include="client\app\main\main.scss" />
+    <Content Include="client\components\modal\modal.html" />
+    <Content Include="client\components\modal\modal.scss" />
+    <Content Include="client\components\navbar\navbar.html" />
+    <Content Include="client\favicon.ico" />
+    <Content Include="client\index.html" />
+    <Content Include="client\robots.txt" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="server\.jshintrc" />
+    <Content Include="server\.jshintrc-spec" />
+    <Content Include="server\views\404.html" />
+    <Content Include="test\.jshintrc" />
+    <Content Include="server\views\index.jade" />
+    <Content Include="server\views\layout.jade" />
+    <Content Include="server\views\error.jade" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="client\" />
+    <Folder Include="client\app\" />
+    <Folder Include="client\app\account\" />
+    <Folder Include="client\app\account\login\" />
+    <Folder Include="client\app\account\settings\" />
+    <Folder Include="client\app\account\signup\" />
+    <Folder Include="client\app\admin\" />
+    <Folder Include="client\app\main\" />
+    <Folder Include="client\assets\" />
+    <Folder Include="client\assets\images\" />
+    <Folder Include="client\assets\stylesheet\" />
+    <Folder Include="client\components\" />
+    <Folder Include="client\components\auth\" />
+    <Folder Include="client\components\modal\" />
+    <Folder Include="client\components\mongoose-error\" />
+    <Folder Include="client\components\navbar\" />
+    <Folder Include="client\components\socket\" />
+    <Folder Include="e2e\" />
+    <Folder Include="e2e\main\" />
+    <Folder Include="server\" />
+    <Folder Include="server\api\" />
+    <Folder Include="server\api\thing\" />
+    <Folder Include="server\api\user\" />
+    <Folder Include="server\auth\" />
+    <Folder Include="server\auth\facebook\" />
+    <Folder Include="server\auth\google\" />
+    <Folder Include="server\auth\local\" />
+    <Folder Include="server\auth\twitter\" />
+    <Folder Include="server\components\" />
+    <Folder Include="server\components\errors\" />
+    <Folder Include="server\config\" />
+    <Folder Include="server\config\environment\" />
+    <Folder Include="test\" />
+    <Folder Include="test\spec\" />
+    <Folder Include="test\spec\controllers\" />
+    <Folder Include="server\views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config" />
+    <Content Include="bin\ChangeConfig.ps1" />
+    <Content Include="bin\download.ps1" />
+    <Content Include="bin\setup_web.cmd" />
+    <Content Include="bin\node.cmd" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

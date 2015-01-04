@@ -1,0 +1,2 @@
+D:\Users\400211967\dev\SocialHead\bin\Microsoft.NodejsTools.WebRole.dll
+D:\Users\400211967\dev\SocialHead\obj\Debug\SocialHead.njsprojResolveAssemblyReference.cache
