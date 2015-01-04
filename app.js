@@ -29,6 +29,9 @@ if(config.seedDB) { require('./server/config/seed'); }
 // Setup server
 var app = express();
 
+// Set App level variables.
+app.set('appRoot', __dirname);
+
 // Set View Engine.
 app.set('views', config.root + '/server/views');
 app.engine('html', require('ejs').renderFile);
@@ -47,7 +50,7 @@ app.use(session({
     secret: config.secrets.session,
     resave: true,
     saveUninitialized: true,
-    store: new mongoStore({ mongoose_connection: mongoose.connection })
+    store: new mongoStore({ mongooseConnection: mongoose.connection })
 }));
 var env = app.get('env');
 if ('production' === env) {
@@ -67,7 +70,7 @@ if ('development' === env || 'test' === env) {
 }
 
 
-// Start the server and start listeneing on assinged port.
+// Start the server and start listening on assigned port.
 var server = require('http').createServer(app);
 var socketio = require('socket.io')(server, {
   serveClient: (config.env === 'production') ? false : true,

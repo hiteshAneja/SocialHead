@@ -28,3 +28,6 @@ bower_components
 # Users Environment Variables
 .lock-wscript
 .ntvs_analysis.dat
+
+# Ideas intellij files
+.idea/**
